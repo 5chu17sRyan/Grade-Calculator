@@ -91,16 +91,72 @@ public class Grader
                 very long switch statement. Is there something that works like criteriaGradeCounter'i' that only
                 tracks the inputs to the 'i'th column?
                 */
-                //Stores the new grade in the gradeHolder matrix at the end of the 'i'th column which corresponds to the
-                //'i'th criteria
-                gradeHolder[i][criteria1_GradeCounter] = newGrade;
-                //Tracks the next empty position in the criteria1 column for the gradeHolder matrix
-                criteria1_GradeCounter++;
-                /*
-                If there is a way for the counter to automatically change this is all I would need to write. Otherwise,
-                I would have to rewrite this 20 times with if else or switch statements just swapping out which
-                criteriaGradeCounter I am using.
-                */
+                switch(i)
+                {
+                    //Stores the new grade in the gradeHolder matrix at the end of the 'i'th column which corresponds to the
+                    //'i'th criteria
+                    case 0: gradeHolder[i][criteria1_GradeCounter] = newGrade;
+                            //Tracks the next empty position in the criteria1 column for the gradeHolder matrix
+                            criteria1_GradeCounter++;
+                            break;
+                    case 1: gradeHolder[i][criteria2_GradeCounter] = newGrade;
+                            criteria2_GradeCounter++;
+                            break;
+                    case 2: gradeHolder[i][criteria3_GradeCounter] = newGrade;
+                            criteria3_GradeCounter++;
+                            break;
+                    case 3: gradeHolder[i][criteria4_GradeCounter] = newGrade;
+                            criteria4_GradeCounter++;
+                            break;
+                    case 4: gradeHolder[i][criteria5_GradeCounter] = newGrade;
+                            criteria5_GradeCounter++;
+                            break;
+                    case 5: gradeHolder[i][criteria6_GradeCounter] = newGrade;
+                            criteria6_GradeCounter++;
+                            break;
+                    case 6: gradeHolder[i][criteria7_GradeCounter] = newGrade;
+                            criteria7_GradeCounter++;
+                            break;
+                    case 7: gradeHolder[i][criteria8_GradeCounter] = newGrade;
+                            criteria8_GradeCounter++;
+                            break;
+                    case 8: gradeHolder[i][criteria9_GradeCounter] = newGrade;
+                            criteria9_GradeCounter++;
+                            break;
+                    case 9: gradeHolder[i][criteria10_GradeCounter] = newGrade;
+                            criteria10_GradeCounter++;
+                            break;
+                    case 10: gradeHolder[i][criteria11_GradeCounter] = newGrade;
+                            criteria11_GradeCounter++;
+                            break;
+                    case 11: gradeHolder[i][criteria12_GradeCounter] = newGrade;
+                            criteria12_GradeCounter++;
+                            break;
+                    case 12: gradeHolder[i][criteria13_GradeCounter] = newGrade;
+                            criteria13_GradeCounter++;
+                            break;
+                    case 13: gradeHolder[i][criteria14_GradeCounter] = newGrade;
+                            criteria14_GradeCounter++;
+                            break;
+                    case 14: gradeHolder[i][criteria15_GradeCounter] = newGrade;
+                            criteria15_GradeCounter++;
+                            break;
+                    case 15: gradeHolder[i][criteria16_GradeCounter] = newGrade;
+                            criteria16_GradeCounter++;
+                            break;
+                    case 16: gradeHolder[i][criteria17_GradeCounter] = newGrade;
+                            criteria17_GradeCounter++;
+                            break;
+                    case 17: gradeHolder[i][criteria18_GradeCounter] = newGrade;
+                            criteria18_GradeCounter++;
+                            break;
+                    case 18: gradeHolder[i][criteria19_GradeCounter] = newGrade;
+                            criteria19_GradeCounter++;
+                            break;
+                    case 19: gradeHolder[i][criteria20_GradeCounter] = newGrade;
+                            criteria20_GradeCounter++;
+                            break;
+                }
 
                 //FOR LATER VERSIONS
                 //Store array in a separate file so it can be accessed after the program is terminated. Need to learn
