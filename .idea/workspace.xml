@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07ed2943-832b-4393-8a96-8a457fb32772" name="Default Changelist" comment="">
+    <list default="true" id="07ed2943-832b-4393-8a96-8a457fb32772" name="Default Changelist" comment="Redesign Grader, add Subject and Record&#10;&#10;Switched from storing grades, criteria names, and weights&#10;in separate arrays to creating a Record class that stores&#10;information about grades, criteria names, and weights. &#10;Redesign Grader to extend an ArrayList containing Records.&#10;This allows one array list to store all of our relevant&#10;data and for methods to act on data contained in the&#10;array list.">
+      <change afterPath="$PROJECT_DIR$/src/com/company/Record.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Subject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Grader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Grader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
@@ -14,28 +16,47 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Grader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="410">
+              <caret line="189" lean-forward="true" selection-start-line="189" selection-end-line="189" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#633#634#0" expanded="true" />
+                <element signature="e#724#725#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Grader.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Subject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="38" column="48" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-80">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Record.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -55,15 +76,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/company/Grader.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Record.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Subject.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Grader.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="15" />
-    <option name="y" value="9" />
-    <option name="width" value="1890" />
+    <option name="x" value="1005" />
+    <option name="width" value="921" />
     <option name="height" value="1020" />
   </component>
   <component name="ProjectView">
@@ -116,7 +138,11 @@
       <updated>1559311022011</updated>
       <workItem from="1559311023356" duration="3553000" />
       <workItem from="1559390132431" duration="4119000" />
-      <workItem from="1559566643200" duration="11030000" />
+      <workItem from="1559566643200" duration="16766000" />
+      <workItem from="1561477877690" duration="2496000" />
+      <workItem from="1561575541752" duration="2540000" />
+      <workItem from="1561824012665" duration="804000" />
+      <workItem from="1561992363563" duration="4528000" />
     </task>
     <task id="LOCAL-00001" summary="Initial set up of constructor for the class grader. Possibly incorrect">
       <created>1559315826596</created>
@@ -153,11 +179,25 @@
       <option name="project" value="LOCAL" />
       <updated>1559750686360</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="&quot;Main&quot; criteriaInput and weightInput code.">
+      <created>1559753920910</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1559753920910</updated>
+    </task>
+    <task id="LOCAL-00007" summary="calculateGrade method v_1.">
+      <created>1559846747634</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1559846747634</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18702000" />
+    <option name="totallyTimeSpent" value="34806000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -181,7 +221,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3285968" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.3374778" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.3285968" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -203,23 +243,42 @@
     <MESSAGE value="v_1 of Grader constructor, inputNewGrade method (wip)" />
     <MESSAGE value="Grader Constructor v_2, inputNewGrade Method v_1, fleshed out comments for Christian." />
     <MESSAGE value="inputNewGrade Method v_2." />
-    <option name="LAST_COMMIT_MESSAGE" value="inputNewGrade Method v_2." />
+    <MESSAGE value="&quot;Main&quot; criteriaInput and weightInput code." />
+    <MESSAGE value="calculateGrade method v_1." />
+    <MESSAGE value="Redesign Grader, add Subject and Record&#10;&#10;Switched from storing grades, criteria names, and weights&#10;in separate arrays to creating a Record class that stores&#10;information about grades, criteria names, and weights. &#10;Redesign Grader to extend an ArrayList containing Records.&#10;This allows one array list to store all of our relevant&#10;data and for methods to act on data contained in the&#10;array list." />
+    <option name="LAST_COMMIT_MESSAGE" value="Redesign Grader, add Subject and Record&#10;&#10;Switched from storing grades, criteria names, and weights&#10;in separate arrays to creating a Record class that stores&#10;information about grades, criteria names, and weights. &#10;Redesign Grader to extend an ArrayList containing Records.&#10;This allows one array list to store all of our relevant&#10;data and for methods to act on data contained in the&#10;array list." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/Grader.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Record.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="38" column="48" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Subject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-80">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Grader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="189" lean-forward="true" selection-start-line="189" selection-end-line="189" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#633#634#0" expanded="true" />
+            <element signature="e#724#725#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
